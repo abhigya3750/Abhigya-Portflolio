@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhigya Kanungo | Product & Operations Problem Solver</title>
     
+    <!-- Premium Fonts: Outfit for headers, Plus Jakarta Sans for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,17 +19,16 @@
                         base: '#050505',      
                         surface: '#121212', 
                         surfaceBorder: '#262626',
-                        accent: '#f59e0b',  // Premium Yellow/Gold Theme
-                        accentHover: '#d97706',
+                        accent: '#facc15',  // Sharp Modern Yellow
+                        accentHover: '#eab308',
                         textMain: '#ffffff', 
                         textMuted: '#9ca3af',
-                        successGreen: '#10b981', // Green where needed (Solutions)
-                        errorRed: '#ef4444' // Red where needed (Friction)
+                        successGreen: '#10b981', 
+                        errorRed: '#ef4444'
                     },
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         display: ['"Outfit"', 'sans-serif'],
-                        signature: ['"Caveat"', 'cursive'],
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
@@ -54,7 +54,7 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+        ::-webkit-scrollbar-thumb:hover { background: #facc15; }
 
         .text-outline {
             color: transparent;
@@ -75,7 +75,7 @@
             overflow-y: auto;
         }
         #detail-tab.active { transform: translateX(0); }
-        .hover-accent-group:hover .accent-target { color: #f59e0b; }
+        .hover-accent-group:hover .accent-target { color: #facc15; }
         
         #mobile-menu {
             transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -91,8 +91,9 @@
     <header class="fixed w-full top-0 z-40 bg-base/85 backdrop-blur-xl border-b border-surfaceBorder/50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
+            <!-- Simple Text Logo -->
             <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <span class="font-signature text-4xl font-bold text-white tracking-widest hover:text-accent transition duration-300">Abhigya Kanungo</span>
+                <span class="font-display text-2xl font-bold text-white hover:text-accent transition duration-300 tracking-wide">Abhigya Kanungo</span>
             </div>
             
             <nav class="hidden md:flex gap-8 items-center">
@@ -124,13 +125,14 @@
     </header>
 
     <main class="w-full">
+        <!-- 1. HERO SECTION -->
         <section class="relative min-h-[95vh] flex items-center pt-24 overflow-hidden border-b border-surfaceBorder/50">
             <div class="text-outline font-display hidden lg:block">ABHIGYA</div>
             <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-12 gap-12 items-center relative z-10 animate-fade-in-up">
                 
                 <div class="md:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-3 bg-surface border border-surfaceBorder px-4 py-2 rounded-full">
-                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#f59e0b]"></span>
+                        <span class="w-2 h-2 rounded-full bg-successGreen animate-pulse shadow-[0_0_8px_#10b981]"></span>
                         <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-textMain opacity-90">AVAILABLE FOR FULL-TIME ROLES</span>
                     </div>
                     
@@ -146,13 +148,15 @@
                     </div>
                 </div>
                 
-                <div class="md:col-span-5 relative flex justify-center lg:justify-end items-center w-full">
-                    <div class="absolute inset-0 bg-gradient-to-t from-base via-transparent to-transparent z-10 bottom-0 h-1/4 pointer-events-none"></div>
-                    <img src="IMG_9926.JPG" onerror="this.src='img_9926.jpg'" alt="Abhigya Kanungo" class="max-h-[70vh] w-auto object-contain opacity-90 rounded-xl border border-surfaceBorder shadow-2xl transition duration-700 hover:opacity-100 hover:scale-[1.01]">
+                <!-- Beautifully Scaled Profile Image Container -->
+                <div class="md:col-span-5 relative flex justify-center lg:justify-end items-center w-full h-[50vh] md:h-[70vh]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-base via-transparent to-transparent z-10 bottom-0 h-1/3 pointer-events-none"></div>
+                    <img src="IMG_9926.JPG" onerror="this.src='img_9926.jpg'" alt="Abhigya Kanungo" class="h-full w-full max-w-md object-cover object-top opacity-90 rounded-2xl border border-surfaceBorder shadow-2xl transition duration-700 hover:opacity-100 hover:scale-[1.02]">
                 </div>
             </div>
         </section>
 
+        <!-- 2. ABOUT -->
         <section id="about" class="py-24 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
                 <div class="md:col-span-4 sticky top-32">
@@ -173,6 +177,7 @@
             </div>
         </section>
 
+        <!-- 3. EXPERIENCE -->
         <section id="experience" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -186,6 +191,7 @@
                 </div>
                 <div class="md:col-span-8 space-y-6">
                     
+                    <!-- AdAstraa -->
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('adastraa')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -199,11 +205,12 @@
                                 </div>
                                 <p class="text-textMain font-medium mb-4 text-sm">AdAstraa Technologies (Pune, MH)</p>
                                 <p class="text-textMuted font-light leading-relaxed text-sm">Working with e-commerce founders to solve manual operational bottlenecks, collaborate on AI feature suggestions, and streamline software onboarding workflows.</p>
-                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief (Tab 2) →</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief →</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Fingpay -->
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('fingpay')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -217,11 +224,12 @@
                                 </div>
                                 <p class="text-textMain font-medium mb-4 text-sm">Fingpay (Tapits Technologies)</p>
                                 <p class="text-textMuted font-light leading-relaxed text-sm">Served as the central coordinator integrating complex payment infrastructures (UPI, QR, Cards) into enterprise ERP platforms.</p>
-                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief & View Photos (Tab 2) →</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief & View Photos →</p>
                             </div>
                         </div>
                     </div>
 
+                    <!-- In Touch -->
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('intouch')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -235,7 +243,7 @@
                                 </div>
                                 <p class="text-textMain font-medium mb-4 text-sm">In Touch Software Solutions</p>
                                 <p class="text-textMuted font-light leading-relaxed text-sm">Worked directly alongside the founder to drive client acquisition and operational support. Helped local businesses transition online.</p>
-                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief (Tab 2) →</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief →</p>
                             </div>
                         </div>
                     </div>
@@ -243,6 +251,7 @@
             </div>
         </section>
 
+        <!-- 4. TOOLBELT -->
         <section class="py-20 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6">
                 <p class="text-xs font-bold tracking-widest uppercase text-textMuted mb-10 text-center md:text-left">My Toolbelt</p>
@@ -251,12 +260,14 @@
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">SQL</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Jira</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Figma</span></div>
+                    <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Notion</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Google Workspace</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Canva</span></div>
                 </div>
             </div>
         </section>
 
+        <!-- 5. BUILD LOG (PROJECT) -->
         <section id="buildlog" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -264,7 +275,7 @@
                         <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2">
                             <span class="w-8 h-px bg-accent"></span> 03 / Project
                         </h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Build Log:<br>Crafting this Site</h3>
+                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Building This<br>Portfolio</h3>
                     </div>
                 </div>
                 <div class="md:col-span-8 space-y-6">
@@ -272,14 +283,15 @@
                         <div class="flex items-center gap-3 mb-3">
                             <span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">UX Design / Agile</span>
                         </div>
-                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">Building This Portfolio</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">A resume can only tell you so much. I treated this portfolio like a product, using an agile approach and AI collaboration to design a clean, user-first experience.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Process (Tab 2) →</p>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">How This Site Came to Life</h4>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">A standard profile can only say so much. I treated this portfolio like a real product, using an agile approach to showcase exactly how I think, solve problems, and execute.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Process →</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 6. EXTRACURRICULAR -->
         <section id="extracurricular" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -301,7 +313,7 @@
                                 </div>
                                 <p class="text-textMain font-medium mb-4 text-sm">Entrepreneurship Development Cell (EDC)</p>
                                 <p class="text-textMuted font-light leading-relaxed text-sm">Leading nationwide student and startup initiatives taught me how scale, ownership, and collaboration really work.</p>
-                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief & View Gallery (Tab 2) →</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Brief & View Gallery →</p>
                             </div>
                         </div>
                     </div>
@@ -312,12 +324,13 @@
                         </div>
                         <p class="text-textMain font-medium mb-4 text-sm">Competitive Sports (ARDOR Tournaments)</p>
                         <p class="text-textMuted font-light leading-relaxed text-sm">Winner (2024) and Runner-Up (2025). Competitive sports ingrained my resilience, split-second strategic thinking, and ability to stay calm.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">View Full Photo Gallery (Tab 2) →</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">View Full Photo Gallery →</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- 7. CERTIFICATIONS -->
         <section class="py-20 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6">
                 <p class="text-xs font-bold tracking-widest uppercase text-textMuted mb-2 text-center md:text-left">Certifications</p>
@@ -352,6 +365,7 @@
             </div>
         </section>
 
+        <!-- 8. IDEAS -->
         <section id="ideas" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -365,29 +379,33 @@
                     
                     <div class="group hover-accent-group border-b border-surfaceBorder/50 pb-10 cursor-pointer" onclick="openDetail('founder')">
                         <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Productivity / AI</span></div>
-                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">The Founder Assistant (Task Execution PRD)</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">An active, AI-powered associate that moves from passive task tracking to autonomous execution—never let a commercial promise slip again.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown (Tab 2) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">The Founder Assistant</h4>
+                        <p class="text-white font-medium mb-3">Shifting from Task Tracking to Execution</p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Ever promised to "send that over" during a busy Zoom call and completely forgot? Meet the AI associate that shifts your workspace from passively logging tasks to autonomously executing them.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown → <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
                     </div>
 
                     <div class="group hover-accent-group border-b border-surfaceBorder/50 pb-10 cursor-pointer" onclick="openDetail('autopay')">
                         <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Fintech / UX</span></div>
-                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">The Trust Layer in Digital Payments</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Granting users true control over scattered subscriptions with a single NPCI-linked dashboard, eliminating 'AutoPay Anxiety' for good.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown (Tab 2) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">The Trust Layer in Digital Payments</h4>
+                        <p class="text-white font-medium mb-3">Solving AutoPay Friction</p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Nobody likes feeling trapped in a subscription. A unified dashboard giving users one-tap control over scattered payments, building trust and directly reducing cart abandonment.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown → <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
                     </div>
 
                     <div class="group hover-accent-group pb-4 cursor-pointer" onclick="openDetail('whatsapp')">
                         <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Communication</span></div>
-                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">Native 'Schedule Send' in WhatsApp</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Unlocking on-device, end-to-end encrypted message scheduling, respecting async work-flows without security risks.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown (Tab 2) <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">Native 'Schedule Send' in WhatsApp Business</h4>
+                        <p class="text-white font-medium mb-3">Asynchronous Communication</p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Respecting out-of-office hours shouldn't require sketchy third-party apps. A native scheduling feature specifically for WhatsApp Business that enables async communication while strictly protecting user privacy.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown → <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
                     </div>
 
                 </div>
             </div>
         </section>
 
+        <!-- 9. CONTACT -->
         <section id="contact" class="py-32 bg-[#030303]">
             <div class="max-w-5xl mx-auto px-6 text-center">
                 <p class="text-xs font-bold tracking-widest uppercase text-accent mb-6 flex items-center justify-center gap-2"><span class="w-4 h-px bg-accent"></span> Let's Work Together <span class="w-4 h-px bg-accent"></span></p>
@@ -395,7 +413,7 @@
                     Always open to meaningful conversations, collaboration, and opportunities to build, learn, and contribute together.
                 </h2>
                 <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <a href="mailto:kanungoabhigya3750@gmail.com" class="inline-flex items-center gap-3 bg-white text-base font-bold px-8 py-4 rounded hover:bg-accent transition w-full sm:w-auto justify-center shadow-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] text-black">
+                    <a href="mailto:kanungoabhigya3750@gmail.com" class="inline-flex items-center gap-3 bg-white text-base font-bold px-8 py-4 rounded hover:bg-accent transition w-full sm:w-auto justify-center shadow-lg hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] text-black">
                         Send me an email <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
@@ -409,6 +427,7 @@
         </section>
     </main>
 
+    <!-- DETAIL OVERLAY (TAB 2) -->
     <div id="detail-tab">
         <div class="sticky top-0 w-full bg-base/95 backdrop-blur-xl border-b border-surfaceBorder p-4 md:p-6 flex justify-between items-center z-50">
             <div class="font-display font-bold text-lg md:text-xl text-white" id="detail-header-title">Detail View</div>
@@ -458,9 +477,9 @@
                     </div>`
             },
             'buildlog': {
-                title: "How This Site Came to Life", subtitle: "03 / Project Detail (Build Log)", tags: ["UX Design", "Agile Methodology", "AI Collaboration"],
+                title: "How This Site Came to Life (Build Log)", subtitle: "03 / Project Detail", tags: ["UX Design", "Agile Execution", "AI Collaboration"],
                 html: `
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4 text-base md:text-lg">A piece of paper or a standard LinkedIn profile can only say so much. I wanted to create a space that actually shows how I think, solve problems, and bring ideas to life. So, I treated this portfolio like a real product and built it from scratch.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4 text-base md:text-lg">A standard profile can only say so much. I wanted to create a space that actually shows how I think, solve problems, and bring ideas to life. So, I treated this portfolio like a real product and built it from scratch.</p>
 
                     <h3 class="font-display text-2xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">🔹 The Agile Approach</h3>
                     <p class="text-textMuted font-light leading-relaxed mb-6">I didn't want a messy, overwhelming website. I applied core product management and agile principles to map out the requirements, design the user experience (UX), and execute:</p>
@@ -575,7 +594,7 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg> View Full PRD Document
                     </a>
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-errorRed block shrink-0"></span> The Friction</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Traditional task trackers are passive digital notebooks requiring manual upkeep. Promises slip through Zoom calls or Slack, causing extreme context switching and delayed project momentum. Tools remind you of a task, but they don't help you do it.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Traditional task trackers are passive digital notebooks requiring manual upkeep. Promises slip through Zoom calls or Slack, causing extreme context switching and delayed project momentum. Ever promised to "send that over" and completely forgot? Tools remind you of a task, but they don't actually help you do it.</p>
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-successGreen block shrink-0"></span> The Solution: AI-Powered Execution Loop</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
                         <li><strong class="text-white font-medium">V1: The "Life-Saver" (Voice Alerts):</strong> Triggers actual phone calls for overdue critical items instead of silent notifications.</li>
@@ -587,7 +606,7 @@
                 title: "The Trust Layer in Digital Payments", subtitle: "Solving AutoPay Friction", tags: ["Fintech", "UX/UI", "Product Breakdown"],
                 html: `
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-errorRed block shrink-0"></span> The Friction</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Subscription platforms love auto-debits because they guarantee renewals. But for users, setting them up triggers major "AutoPay Anxiety." Under India's RBI guidelines, once you set them up, managing them is a mess (scattered across GPay, merchant sites, or bank portals). Many users abandon carts entirely instead of opting for auto-pay.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Subscription platforms love auto-debits because they guarantee renewals. But for users, setting them up triggers major "AutoPay Anxiety." Under India's RBI guidelines, once you set them up, managing them is a mess (scattered across GPay, merchant sites, or bank portals). Nobody likes feeling trapped, so many users abandon carts entirely instead of opting for auto-pay.</p>
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-successGreen block shrink-0"></span> The Solution: A Unified AutoPay Dashboard</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
                         <li><strong class="text-white font-medium">Clear Visibility:</strong> Pulls all mandates into one clean list linked to your phone number.</li>
@@ -596,12 +615,13 @@
                     </ul>`
             },
             'whatsapp': {
-                title: "Native 'Schedule Send' in WhatsApp", subtitle: "Asynchronous Communication", tags: ["Communication", "UX/UI", "Product Breakdown"],
+                title: "Native 'Schedule Send' in WhatsApp Business", subtitle: "Asynchronous Communication", tags: ["Communication", "UX/UI", "Product Breakdown"],
                 html: `
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-errorRed block shrink-0"></span> The Friction</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">We easily schedule emails to respect people's working hours. Yet, instant messaging forces us into a "send immediately or forget entirely" corner. People currently resort to sketchy third-party keyboard extensions to schedule texts, creating massive corporate data security risks.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">We easily schedule emails to respect people's working hours. Yet, instant messaging forces us into a "send immediately or forget entirely" corner. People currently resort to sketchy third-party keyboard extensions to schedule texts, creating massive corporate data security risks. Respecting out-of-office hours shouldn't compromise privacy.</p>
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-successGreen block shrink-0"></span> The Solution: Native "Schedule Send"</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
+                        <li><strong class="text-white font-medium">Built for Business:</strong> Integrating this specifically into WhatsApp Business allows professionals to manage async communication while keeping personal privacy strictly separate and protected.</li>
                         <li><strong class="text-white font-medium">Simple Interaction:</strong> A press-and-hold on "Send" brings up a time-selection UI.</li>
                         <li><strong class="text-white font-medium">The Queue UI:</strong> Scheduled messages sit at the bottom of the chat with a clock icon.</li>
                         <li><strong class="text-white font-medium">On-Device Safety:</strong> Messages queue securely on-device, preserving end-to-end encryption.</li>
