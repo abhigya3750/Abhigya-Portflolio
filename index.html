@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhigya Kanungo | Product & Operations</title>
+    <title>Abhigya Kanungo | Product & Operations Problem Solver</title>
     
+    <!-- Premium Modern Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,13 +19,14 @@
                         base: '#050505',      
                         surface: '#121212', 
                         surfaceBorder: '#262626',
-                        accent: '#c0ff00',
+                        accent: '#f59e0b',  // Premium Yellow/Gold
                         textMain: '#ffffff', 
                         textMuted: '#9ca3af'
                     },
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         display: ['"Outfit"', 'sans-serif'],
+                        signature: ['"Caveat"', 'cursive'],
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
@@ -50,11 +52,11 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #c0ff00; }
+        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
 
         .text-outline {
             color: transparent;
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.03);
             position: absolute;
             z-index: -1;
             top: 5%; left: -5%;
@@ -69,7 +71,7 @@
             overflow-y: auto;
         }
         #detail-tab.active { transform: translateX(0); }
-        .hover-accent-group:hover .accent-target { color: #c0ff00; }
+        .hover-accent-group:hover .accent-target { color: #f59e0b; }
         
         #mobile-menu {
             transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
@@ -82,16 +84,23 @@
 
     <div class="fixed inset-0 opacity-[0.03] pointer-events-none z-[-1]" style="background-image: url('https://www.transparenttextures.com/patterns/stardust.png');"></div>
 
+    <!-- HEADER / NAV -->
     <header class="fixed w-full top-0 z-40 bg-base/85 backdrop-blur-xl border-b border-surfaceBorder/50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-display font-bold text-2xl tracking-wide text-white cursor-pointer" onclick="window.scrollTo(0,0)">AK.</div>
             
+            <!-- Code-only Signature Logo -->
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <span class="font-signature text-3xl font-bold text-white tracking-widest hover:text-accent transition">Abhigya K.</span>
+            </div>
+            
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex gap-8 items-center">
                 <a href="#about" class="text-xs font-bold tracking-widest uppercase text-textMuted hover:text-accent transition">About</a>
                 <a href="#experience" class="text-xs font-bold tracking-widest uppercase text-textMuted hover:text-accent transition">Experience</a>
+                <a href="#buildlog" class="text-xs font-bold tracking-widest uppercase text-textMuted hover:text-accent transition">Build Log</a>
                 <a href="#extracurricular" class="text-xs font-bold tracking-widest uppercase text-textMuted hover:text-accent transition">Leadership</a>
                 <a href="#ideas" class="text-xs font-bold tracking-widest uppercase text-textMuted hover:text-accent transition">Ideas</a>
-                <a href="https://drive.google.com/drive/folders/1gUuhk-BoO5bukmOsqsas--g-3e5wpGmQ?usp=share_link" target="_blank" class="text-xs font-bold tracking-widest uppercase text-base bg-accent px-5 py-2.5 rounded hover:bg-white transition flex items-center gap-2">
+                <a href="https://drive.google.com/drive/folders/1gUuhk-BoO5bukmOsqsas--g-3e5wpGmQ?usp=share_link" target="_blank" class="text-xs font-bold tracking-widest uppercase text-base bg-accent px-5 py-2.5 rounded hover:bg-white transition flex items-center gap-2 text-black shadow-[0_0_15px_rgba(245,158,11,0.1)]">
                     Resume <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </a>
             </nav>
@@ -105,6 +114,7 @@
             <div class="flex flex-col py-4 gap-4">
                 <a href="#about" onclick="toggleMobileMenu()" class="text-sm font-bold tracking-widest uppercase text-textMuted hover:text-accent">About</a>
                 <a href="#experience" onclick="toggleMobileMenu()" class="text-sm font-bold tracking-widest uppercase text-textMuted hover:text-accent">Experience</a>
+                <a href="#buildlog" onclick="toggleMobileMenu()" class="text-sm font-bold tracking-widest uppercase text-textMuted hover:text-accent">Build Log</a>
                 <a href="#extracurricular" onclick="toggleMobileMenu()" class="text-sm font-bold tracking-widest uppercase text-textMuted hover:text-accent">Leadership</a>
                 <a href="#ideas" onclick="toggleMobileMenu()" class="text-sm font-bold tracking-widest uppercase text-textMuted hover:text-accent">Ideas</a>
                 <a href="https://drive.google.com/drive/folders/1gUuhk-BoO5bukmOsqsas--g-3e5wpGmQ?usp=share_link" target="_blank" class="text-sm font-bold tracking-widest uppercase text-accent mt-2">View Resume ↗</a>
@@ -119,7 +129,7 @@
                 
                 <div class="md:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-3 bg-surface border border-surfaceBorder px-4 py-2 rounded-full">
-                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#c0ff00]"></span>
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#f59e0b]"></span>
                         <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-textMain opacity-90">AVAILABLE FOR FULL-TIME ROLES</span>
                     </div>
                     
@@ -135,8 +145,9 @@
                     </div>
                 </div>
                 
-                <div class="md:col-span-5 relative flex justify-center lg:justify-end items-center w-full">
-                    <img src="img_9926.jpg" onerror="this.src='IMG_9926.JPG'" alt="Abhigya Kanungo" class="max-h-[70vh] w-auto object-contain opacity-90 rounded-xl border border-surfaceBorder shadow-2xl transition duration-700 hover:opacity-100 hover:scale-[1.01]">
+                <div class="md:col-span-5 relative h-[50vh] md:h-[75vh] flex justify-center lg:justify-end items-end">
+                    <div class="absolute inset-0 bg-gradient-to-t from-base via-transparent to-transparent z-10 bottom-0 h-1/3 pointer-events-none"></div>
+                    <img src="img_9926.jpg" onerror="this.src='IMG_9926.JPG'" alt="Abhigya Kanungo" class="h-full w-full max-w-md object-cover object-top opacity-85 rounded-xl border border-surfaceBorder shadow-2xl transition duration-700 hover:opacity-100 hover:scale-[1.02]">
                 </div>
             </div>
         </section>
@@ -182,11 +193,12 @@
                             <div class="flex-grow">
                                 <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-textMuted mb-2">Jan 2026 – Present</p>
                                 <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-display text-2xl font-bold text-white group-hover:text-accent transition">Business Associate</h4>
+                                    <h4 class="font-display text-2xl font-bold text-white group-hover:text-accent transition">Business Analyst Trainee</h4>
                                     <svg class="w-5 h-5 accent-target text-surfaceBorder shrink-0 ml-4 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                 </div>
-                                <p class="text-textMain font-medium mb-4 text-sm">AdAstraa Technologies</p>
-                                <p class="text-textMuted font-light leading-relaxed text-sm">Bridging the gap between e-commerce founders' operational struggles and our suite of AI growth tools.</p>
+                                <p class="text-textMain font-medium mb-4 text-sm">AdAstraa Technologies (Pune, MH)</p>
+                                <p class="text-textMuted font-light leading-relaxed text-sm">Working with e-commerce founders to solve manual operational bottlenecks, collaborate on AI feature suggestions, and streamline software onboarding workflows.</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Read Full Brief (Tab 2) →</p>
                             </div>
                         </div>
                     </div>
@@ -203,26 +215,28 @@
                                     <svg class="w-5 h-5 accent-target text-surfaceBorder shrink-0 ml-4 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                 </div>
                                 <p class="text-textMain font-medium mb-4 text-sm">Fingpay (Tapits Technologies)</p>
-                                <p class="text-textMuted font-light leading-relaxed text-sm">Served as the central coordinator integrating complex payment infrastructures (UPI, QR, Cards) into enterprise ERP platforms.</p>
+                                <p class="text-textMuted font-light leading-relaxed text-sm">Served as the central coordinator integrating complex payment infrastructures (UPI, QR, Cards) into enterprise ERP platforms to enable automated billing.</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Read Full Brief & View Photos (Tab 2) →</p>
                             </div>
-                        </div>
-                    </div>
+        <!-- NEW: BUILD LOG SECTION (PERSONAL PORTFOLIO MAKING PROCESS) -->
+        <section id="buildlog" class="py-24 border-b border-surfaceBorder/50 bg-surface/20 relative">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
+                
+                <div class="md:col-span-4 relative sticky top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 03 / Project</h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Build Log:<br>Crafting this Site</h3>
+                </div>
 
-                    <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('intouch')">
-                        <div class="flex flex-col sm:flex-row sm:items-start gap-6">
-                            <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
-                                <img src="intouchlogo.jpg" onerror="this.parentElement.innerHTML='<span class=\'text-black font-bold text-xs\'>Logo</span>'" alt="In Touch Logo" class="w-full h-full object-contain">
-                            </div>
-                            <div class="flex-grow">
-                                <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-textMuted mb-2">May 2023 – Aug 2023</p>
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-display text-2xl font-bold text-white group-hover:text-accent transition">Business Dev & Ops Intern</h4>
-                                    <svg class="w-5 h-5 accent-target text-surfaceBorder shrink-0 ml-4 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                                <p class="text-textMain font-medium mb-4 text-sm">In Touch Software Solutions</p>
-                                <p class="text-textMuted font-light leading-relaxed text-sm">Worked directly alongside the founder to drive client acquisition and operational support. Helped local businesses transition online.</p>
-                            </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('buildlog')">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">UX Design / Agile</span>
                         </div>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">How This Site Came to Life</h4>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">
+                            A resume can only tell you so much. I treated this portfolio like a product, applying agile principles and AI collaboration to design a clean, user-first experience from scratch.
+                        </p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Read Full Process (Tab 2) →</p>
                     </div>
                 </div>
             </div>
@@ -236,20 +250,44 @@
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">SQL</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Jira</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Figma</span></div>
+                    <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Notion</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Google Workspace</span></div>
                     <div class="flex items-center gap-3 bg-base border border-surfaceBorder px-5 py-3 rounded-full hover:border-accent transition duration-300 shadow-sm"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" class="w-6 h-6"/><span class="text-sm font-medium text-white">Canva</span></div>
                 </div>
             </div>
         </section>
 
-        <section id="extracurricular" class="py-24 border-b border-surfaceBorder/50 relative">
+        <section id="buildlog" class="py-24 border-b border-surfaceBorder/50 bg-surface/20 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-4 relative">
-                    <div class="sticky top-32">
-                        <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 03 / Extra</h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Leadership<br>& Sports</h3>
+                
+                <div class="md:col-span-4 relative sticky top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 03 / Project</h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Build Log:<br>Crafting this Site</h3>
+                </div>
+
+                <div class="md:col-span-8 space-y-6">
+                    <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('buildlog')">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">UX Design / Dev</span>
+                        </div>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">Mastering the Art of Problem-Solving</h4>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">
+                            A direct breakdown of the research, UX wireframing, tech stack decisions, and continuous deployment workflow I used to design and build this modern, user-first portfolio website.
+                        </p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Read Full Process & View Design (Tab 2) →</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="extracurricular" class="py-24 border-b border-surfaceBorder/50 relative">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
+                
+                <div class="md:col-span-4 relative sticky top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 04 / Extra</h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Leadership<br>& Sports</h3>
+                </div>
+
                 <div class="md:col-span-8 space-y-6">
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('edc')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
@@ -262,17 +300,20 @@
                                     <svg class="w-5 h-5 accent-target text-surfaceBorder shrink-0 ml-4 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                 </div>
                                 <p class="text-textMain font-medium mb-4 text-sm">Entrepreneurship Development Cell (EDC)</p>
-                                <p class="text-textMuted font-light leading-relaxed text-sm">Leading nationwide student and startup initiatives taught me how scale, ownership, and collaboration really work.</p>
+                                <p class="text-textMuted font-light leading-relaxed text-sm">Leading nationwide initiatives, securing sponsorships, and managing operational logistics taught me true scale and ownership.</p>
+                                <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Read Full Brief & View Gallery (Tab 2) →</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('sports')">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-display text-2xl font-bold text-white group-hover:text-accent transition">Table Tennis Champion</h4>
                             <svg class="w-5 h-5 accent-target text-surfaceBorder shrink-0 ml-4 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                         <p class="text-textMain font-medium mb-4 text-sm">Competitive Sports (ARDOR Tournaments)</p>
-                        <p class="text-textMuted font-light leading-relaxed text-sm">Winner (2024) and Runner-Up (2025). Competitive sports ingrained my resilience, split-second strategic thinking, and ability to stay calm.</p>
+                        <p class="text-textMuted font-light leading-relaxed text-sm">ARDOR Winner (2024). Competitive sports ingrained strategic resilience and performance under extreme pressure.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">View Full Photo Gallery (Tab 2) →</p>
                     </div>
                 </div>
             </div>
@@ -280,31 +321,41 @@
 
         <section class="py-20 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6">
-                <p class="text-xs font-bold tracking-widest uppercase text-textMuted mb-10 text-center md:text-left">Certifications</p>
+                <p class="text-xs font-bold tracking-widest uppercase text-textMuted mb-2 text-center md:text-left">Certifications</p>
+                <p class="text-sm text-textMuted mb-10 text-center md:text-left">Tap a certificate to verify its validity on Google Drive.</p>
+                
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    
                     <a href="https://drive.google.com/drive/folders/1VAJNkzWHKG8WFd1IejdWpmNqpeErmC-j?usp=share_link" target="_blank" class="group block p-6 border border-surfaceBorder rounded-xl bg-base hover:border-accent transition duration-300 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-surfaceBorder group-hover:bg-accent transition duration-300"></div>
                         <p class="text-accent text-[10px] font-bold uppercase tracking-[0.15em] mb-2">Feb 2026</p>
                         <p class="font-display font-semibold text-base text-white leading-tight mb-2">Generative AI for Product Managers</p>
-                        <p class="text-xs text-textMuted">LinkedIn Learning</p>
+                        <p class="text-xs text-textMuted">LinkedIn Learning (PMI®)</p>
+                        <svg class="w-4 h-4 text-surfaceBorder group-hover:text-accent absolute bottom-4 right-4 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
+
                     <a href="https://drive.google.com/drive/folders/1VAJNkzWHKG8WFd1IejdWpmNqpeErmC-j?usp=share_link" target="_blank" class="group block p-6 border border-surfaceBorder rounded-xl bg-base hover:border-accent transition duration-300 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-surfaceBorder group-hover:bg-accent transition duration-300"></div>
                         <p class="text-accent text-[10px] font-bold uppercase tracking-[0.15em] mb-2">Oct 2025</p>
                         <p class="font-display font-semibold text-base text-white leading-tight mb-2">Project Management Skills for Leaders</p>
-                        <p class="text-xs text-textMuted">LinkedIn Learning</p>
+                        <p class="text-xs text-textMuted">LinkedIn Learning (PMI®)</p>
+                        <svg class="w-4 h-4 text-surfaceBorder group-hover:text-accent absolute bottom-4 right-4 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
+
                     <a href="https://drive.google.com/drive/folders/1VAJNkzWHKG8WFd1IejdWpmNqpeErmC-j?usp=share_link" target="_blank" class="group block p-6 border border-surfaceBorder rounded-xl bg-base hover:border-accent transition duration-300 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-surfaceBorder group-hover:bg-accent transition duration-300"></div>
                         <p class="text-accent text-[10px] font-bold uppercase tracking-[0.15em] mb-2">Apr 2026</p>
                         <p class="font-display font-semibold text-base text-white leading-tight mb-2">Technical Product Management</p>
                         <p class="text-xs text-textMuted">LinkedIn Learning</p>
+                        <svg class="w-4 h-4 text-surfaceBorder group-hover:text-accent absolute bottom-4 right-4 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
+
                     <a href="https://drive.google.com/drive/folders/1VAJNkzWHKG8WFd1IejdWpmNqpeErmC-j?usp=share_link" target="_blank" class="group block p-6 border border-surfaceBorder rounded-xl bg-base hover:border-accent transition duration-300 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-surfaceBorder group-hover:bg-accent transition duration-300"></div>
                         <p class="text-accent text-[10px] font-bold uppercase tracking-[0.15em] mb-2">Mar 2026</p>
                         <p class="font-display font-semibold text-base text-white leading-tight mb-2">Product Management First Steps</p>
                         <p class="text-xs text-textMuted">LinkedIn Learning</p>
+                        <svg class="w-4 h-4 text-surfaceBorder group-hover:text-accent absolute bottom-4 right-4 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
             </div>
@@ -312,36 +363,33 @@
 
         <section id="ideas" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-4 relative">
-                    <div class="sticky top-32">
-                        <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 04 / Product</h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Strategic<br>Breakdowns</h3>
-                        <p class="text-sm text-textMuted max-w-xs leading-relaxed font-light border-l border-surfaceBorder pl-4">How I analyze friction and design practical, high-impact product solutions.</p>
-                    </div>
+                <div class="md:col-span-4 relative sticky top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 05 / Product</h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Strategic<br>Breakdowns</h3>
+                    <p class="text-sm text-textMuted max-w-xs leading-relaxed font-light border-l border-surfaceBorder pl-4">How I analyze friction and design practical, high-impact product solutions.</p>
                 </div>
                 <div class="md:col-span-8 space-y-8">
                     
                     <div class="group hover-accent-group border-b border-surfaceBorder/50 pb-10 cursor-pointer" onclick="openDetail('founder')">
-                        <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Productivity / AI</span></div>
+                        <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Productivity / AI</span></div>
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">The Founder Assistant (Task Execution PRD)</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Shifting the workspace from passive task tracking to active task execution. Architected an AI-powered execution loop to keep projects moving.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2">Read Full Breakdown <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">An active, AI-powered associate that moves from passive task tracking to autonomous execution—never let a commercial promise slip again.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Explore Full Breakdown & Business Impact (Tab 2) →</p>
                     </div>
 
                     <div class="group hover-accent-group border-b border-surfaceBorder/50 pb-10 cursor-pointer" onclick="openDetail('autopay')">
-                        <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Fintech / UX</span></div>
+                        <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Fintech / UX</span></div>
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">The Trust Layer in Digital Payments</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Solving "AutoPay Anxiety" by architecting a unified AutoPay Dashboard built on NPCI networks.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2">Read Full Breakdown <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Granting users true control over scattered subscriptions with a single NPCI-linked dashboard, eliminating 'AutoPay Anxiety' for good.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Explore Full Breakdown & UX Impact (Tab 2) →</p>
                     </div>
 
                     <div class="group hover-accent-group pb-4 cursor-pointer" onclick="openDetail('whatsapp')">
-                        <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Communication</span></div>
+                        <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Communication</span></div>
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-3">Native 'Schedule Send' in WhatsApp</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Addressing communication friction by proposing a native 'Schedule Send' feature within WhatsApp.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2">Read Full Breakdown <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Unlocking on-device, end-to-end encrypted message scheduling, respecting async work-flows without security risks.</p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6">Explore Full Breakdown & Technical Journey (Tab 2) →</p>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -352,16 +400,17 @@
                 <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight max-w-4xl mx-auto leading-tight">
                     Always open to meaningful conversations, collaboration, and opportunities to build, learn, and contribute together.
                 </h2>
+                
                 <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <a href="mailto:kanungoabhigya3750@gmail.com" class="inline-flex items-center gap-3 bg-white text-base font-bold px-8 py-4 rounded hover:bg-accent transition w-full sm:w-auto justify-center shadow-lg hover:shadow-[0_0_20px_rgba(192,255,0,0.3)] text-black">
+                    <a href="mailto:kanungoabhigya3750@gmail.com" class="inline-flex items-center gap-3 bg-white text-base font-bold px-8 py-4 rounded hover:bg-accent transition w-full sm:w-auto justify-center shadow-lg hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] text-black">
                         Send me an email <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
+
                 <div class="flex flex-wrap justify-center gap-6 mt-16 text-xs font-bold tracking-widest uppercase text-textMuted">
                     <a href="https://drive.google.com/drive/folders/1gUuhk-BoO5bukmOsqsas--g-3e5wpGmQ?usp=share_link" target="_blank" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">Resume</a>
                     <a href="https://www.linkedin.com/in/abhigyakanungo" target="_blank" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">LinkedIn</a>
                     <a href="tel:+919993805217" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">Mobile: +91 9993805217</a>
-                    <a href="mailto:kanungoabhigya3750@gmail.com" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">Email</a>
                 </div>
             </div>
         </section>
@@ -385,7 +434,7 @@
                 html: `
                     <div class="space-y-6 text-textMuted font-light leading-relaxed mb-12">
                         <p><strong class="text-white font-medium">My superpower is simple: I am a resourceful problem-solver who just gets things done.</strong> If I don’t know how to do something, I will spend the time troubleshooting, brainstorming, and experimenting until I figure it out. I am the person who stays calm and finds a way to move a project forward, no matter how messy it looks at first.</p>
-                        <p>I’ve worked across fintech and startup environments, supporting payment solutions, partner onboarding, and cross-functional execution. My experience spans managing integrated payment infrastructures at Fingpay (coordinating with multiple ERP partners and billing softwares to enable automated, invoice-based payments) to orchestrating large-scale nationwide student and startup initiatives at the Entrepreneurship Development Cell.</p>
+                        <p>I’ve worked across fintech and startup environments, supporting payment solutions, partner onboarding, and cross-functional execution. My experience spans managing integrated payment infrastructures at Fingpay (coordinating with multiple ERP partners to enable automated, invoice-based payments) to orchestrating large-scale nationwide student and startup initiatives at the Entrepreneurship Development Cell.</p>
                         <p>I believe the best products today are built by combining <strong class="text-white font-medium">Human Intelligence with AI Execution</strong>. I enjoy working at the intersection of business and technology, gathering requirements, and translating complex needs into practical, scalable outcomes. I’m comfortable in fast-moving environments and thrive where learning, execution, and teamwork go hand in hand.</p>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8 border-t border-surfaceBorder pt-10">
@@ -415,24 +464,38 @@
                         </div>
                     </div>`
             },
+            
+            // AdAstraa Detail (Updated with Full Text)
             'adastraa': {
-                title: "Business Associate", subtitle: "AdAstraa Technologies Pvt. Ltd. | Jan 2026 – Present", tags: ["Consulting", "Onboarding", "Agile Sprints", "Market Research"],
+                title: "Business Analyst Trainee", subtitle: "02 / Work", tags: ["Requirement Gathering", "User Adoption", "Agile Sprints"],
                 html: `
+                    <p class="text-textMuted text-xs font-bold uppercase tracking-widest mb-10 pb-4 border-b border-surfaceBorder">AdAstraa Technologies Pvt. Ltd. (Pune, MH) | Jan 2026 – Present</p>
+
                     <h3 class="font-display text-2xl font-bold text-white mb-4">What the Company Does</h3>
                     <p class="text-textMuted font-light leading-relaxed mb-8">They build and sell a suite of 4 e-commerce growth tools. These tools help online brands automate their marketing, track their metrics, and scale their sales.</p>
+                    
                     <h3 class="font-display text-2xl font-bold text-white mb-4">My Actual Job</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8">I work directly with e-commerce brand owners to understand what makes their daily business hard (high costs, slow processes), and I work with our tech team to make sure our tools solve those issues. I also make sure new clients can start using our software easily without getting stuck in technical setups.</p>
-                    <h3 class="font-display text-2xl font-bold text-white mb-4">What I Do & How I Do It</h3>
+                    <p class="text-textMuted font-light leading-relaxed mb-8">I work directly with e-commerce brand owners to understand their operational bottlenecks (high costs, slow processes), and I collaborate with our tech team to ensure our tools provide the right solutions. I also optimize the onboarding workflow so new clients can adopt our software smoothly without technical friction.</p>
+                    
+                    <h3 class="font-display text-2xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">What I Do & How I Do It</h3>
+                    <ul class="space-y-5 text-textMuted font-light mb-12">
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Requirement Gathering & Problem Solving:</strong> I talk to e-commerce brands to elicit their operational pain points, documenting their needs to suggest which of our AI-driven features will fix their manual work.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">User Adoption & Process Improvement:</strong> I guide new brands through setting up the software and running initial simulations. I focus on simplifying this onboarding process to reduce technical confusion and improve user retention.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Competitive Market Analysis:</strong> I research other e-commerce tools in the market to benchmark features and pricing, identifying areas where our product can deliver better value.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Data Analysis & Reporting:</strong> I analyze performance data and profitability metrics to build reports for enterprise clients, demonstrating the exact business value and ROI our tools provide.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Agile Sprint Collaboration:</strong> I participate in meetings with developers to translate client feature requests into technical tasks, helping organize our Scrum sprints to ensure we build what matters most.</span></li>
+                    </ul>
+
+                    <h3 class="font-display text-xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">🛠️ Tools & Skills Used</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-8">
-                        <li><strong class="text-white font-medium">Consulting & Problem Solving:</strong> I talk to e-commerce brands, listen to their operational pain points, and suggest which of our AI-driven features will fix their manual work.</li>
-                        <li><strong class="text-white font-medium">Onboarding Clients:</strong> I guide new brands through setting up the software and running initial simulations.</li>
-                        <li><strong class="text-white font-medium">Market & Competitor Analysis:</strong> I research other e-commerce tools in the market to see what features they have, how they price themselves, and where our tools can do better.</li>
-                        <li><strong class="text-white font-medium">Data Analysis:</strong> I look at performance data and profitability metrics to build reports for our enterprise clients.</li>
-                        <li><strong class="text-white font-medium">Agile Sprints:</strong> I sit in meetings with our developers to align sprints.</li>
+                        <li><strong class="text-white font-medium">Documentation & Tracking:</strong> CRM, Notion, and Google Workspace (Docs/Sheets) for daily pipeline tracking and managing requirement documentation.</li>
+                        <li><strong class="text-white font-medium">Stakeholder Communication:</strong> Creating simple, direct slide decks for client calls and alignment.</li>
+                        <li><strong class="text-white font-medium">AI Tools & Data Handling:</strong> Used to accelerate market research, draft user guides, and structure messy data.</li>
+                        <li><strong class="text-white font-medium">Soft Skills:</strong> Active listening, cross-functional team coordination, and translating technical terms into clear business language for clients.</li>
                     </ul>`
             },
             'fingpay': {
-                title: "Operations Associate", subtitle: "Fingpay (Tapits Technologies) | Jun 2025 – Nov 2025", tags: ["ERP Integration", "BRD/PRD", "UAT", "SQL", "Figma"],
+                title: "Operations Associate", subtitle: "02 / Work", tags: ["ERP Integration", "BRD/PRD", "UAT", "SQL", "Figma"],
                 html: `
                     <h3 class="font-display text-2xl font-bold text-white mb-4">What the Company Does</h3>
                     <p class="text-textMuted font-light leading-relaxed mb-8">Fingpay is a fintech company that provides payment collection infrastructure (UPI, QR codes, Cards) and automates financial reconciliation for businesses.</p>
@@ -450,7 +513,7 @@
                     </div>`
             },
             'intouch': {
-                title: "Business Dev & Ops Intern", subtitle: "In Touch Software Solutions | May 2023 – Aug 2023", tags: ["Client Acquisition", "Wireframing", "Social Strategy"],
+                title: "Business Dev & Ops Intern", subtitle: "02 / Work", tags: ["Client Acquisition", "Wireframing", "Social Strategy"],
                 html: `
                     <h3 class="font-display text-2xl font-bold text-white mb-4">What I Do & How I Do It</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-8">
@@ -459,9 +522,34 @@
                         <li><strong class="text-white font-medium">Website Planning & Social Strategy:</strong> Contributed to website planning by defining basic user requirements and structure.</li>
                     </ul>`
             },
-            'edc': {
-                title: "Public Relations Leader", subtitle: "Entrepreneurship Development Cell | Aug 2023 – Nov 2024", tags: ["Operations Scale", "Sponsor Acquisition", "Team Leadership"],
+            'buildlog': {
+                title: "How This Site Came to Life (Build Log)", subtitle: "03 / Project Detail", tags: ["UX Design", "Agile Execution", "AI Collaboration"],
                 html: `
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">A piece of paper or a standard LinkedIn profile can only say so much. I wanted to create a space that actually shows how I think, solve problems, and bring ideas to life. So, I treated this portfolio like a real product and built it from scratch.</p>
+                    
+                    <h3 class="font-display text-2xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">The Agile Approach</h3>
+                    <p class="text-textMuted font-light leading-relaxed mb-6">I didn't want a messy, overwhelming website. I applied core product management and agile principles to map out the requirements, design the user experience (UX), and execute:</p>
+                    <ul class="space-y-5 text-textMuted font-light mb-12">
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Research & Requirements:</strong> I looked at modern design trends to figure out the main goal: making my experience easy to digest for busy stakeholders.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Design & UX:</strong> I planned a "2-Tab" progressive layout. The main page gives you quick, bite-sized summaries, my toolbelt, and certificates right up front. If you want to see the full PRDs, photo galleries, or deeper project breakdowns, they are just a click away. It respects your time.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Build & AI Collaboration:</strong> I kept the tech stack lightweight using HTML, CSS (Tailwind), and vanilla JavaScript. I also collaborated with AI as a thought partner to rapidly prototype the code layout, brainstorm structure, and refine the narrative.</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-accent block shrink-0 mt-1.5"></span><span><strong class="text-white font-medium">Ship & Iterate:</strong> I connected the site to GitHub and Netlify for continuous deployment. This allows me to treat the site as a living product, pushing live updates instantly as I learn and grow.</span></li>
+                    </ul>
+
+                    <h3 class="font-display text-xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">🛠️ Tools Used</h3>
+                    <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-8">
+                        <li>Figma (Planning & Layout)</li>
+                        <li>Generative AI (Prototyping & Copy Refinement)</li>
+                        <li>HTML5 & JavaScript (Custom UI logic)</li>
+                        <li>Tailwind CSS (Styling)</li>
+                        <li>Git, GitHub & Netlify (Version Control & Deployment)</li>
+                    </ul>`
+            },
+            'edc': {
+                title: "Public Relations Leader", subtitle: "04 / Leadership", tags: ["Operations Scale", "Sponsor Acquisition", "Team Leadership"],
+                html: `
+                    <h3 class="font-display text-2xl font-bold text-white mb-4">What the Organization Does</h3>
+                    <p class="text-textMuted font-light leading-relaxed mb-8">An active student-run cell in college dedicated to building a startup culture, hosting hackathons, and connecting young founders with industry mentors and investors.</p>
                     <h3 class="font-display text-2xl font-bold text-white mb-4">What I Do & How I Do It</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
                         <li><strong class="text-white font-medium">Building Partnerships & Collaborations:</strong> Reached out to and established collaborations with 10+ startup networks.</li>
@@ -475,51 +563,51 @@
                     </div>`
             },
             'sports': {
-                title: "Table Tennis Champion", subtitle: "ARDOR Tournaments | 2024 & 2025", tags: ["Resilience", "Strategic Thinking", "Pressure Management"],
+                title: "Table Tennis Champion", subtitle: "04 / Extra", tags: ["Resilience", "Strategic Thinking", "Pressure Management"],
                 html: `
-                    <p class="text-textMuted font-light leading-relaxed mb-8">Winner (ARDOR 2024), Runner-Up (ARDOR 2025). Competitive sports ingrained my resilience, split-second strategic thinking, and ability to stay calm under intense pressure.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8">Winner (ARDOR 2024), Runner-Up (ARDOR 2025). Competitive sports ingrained my resilience, split-second strategic thinking, and ability to stay calm.</p>
                     <h3 class="font-display text-xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">Gallery</h3>
                     <div class="flex justify-center md:justify-start">
                         <img src="tt-1.jpg" onerror="this.style.display='none'" class="w-full max-w-lg h-auto max-h-96 object-cover rounded-lg border border-surfaceBorder shadow-xl">
                     </div>`
             },
             'founder': {
-                title: "The Founder Assistant", subtitle: "Shifting from Task Tracking to Execution", tags: ["Productivity", "AI", "Product Breakdown"],
+                title: "The Founder Assistant", subtitle: "Shifting Task Tracking to Execution", tags: ["Productivity", "AI", "PRD Breakdown"],
                 html: `
                     <a href="https://docs.google.com/document/d/1JMF6NfdrFvAl4JGlF4r9mIVuxmC8rDbXl-v0E5t42dk/edit?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-white text-base px-5 py-3 rounded text-sm font-bold mb-10 hover:bg-accent transition shadow-lg text-black">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg> View Full PRD Document
                     </a>
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-red-500 block shrink-0"></span> The Friction</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Traditional task trackers are passive digital notebooks requiring manual upkeep. Promises slip through Zoom calls or Slack, causing extreme context switching and delayed project momentum. Tools remind you of a task, but they don't help you do it.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Traditional task trackers are passive digital notebooks requiring manual upkeep. Promises slip through calls, context switching delays project momentum. Tools remind you of a task; they don't help you do it.</p>
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-accent block shrink-0"></span> The Solution: AI-Powered Execution Loop</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
-                        <li><strong class="text-white font-medium">V1: The "Life-Saver" (Voice Alerts):</strong> Triggers actual phone calls for overdue critical items instead of silent notifications.</li>
-                        <li><strong class="text-white font-medium">V2: The "Standard Assistant":</strong> Pre-writes contextual follow-ups, client emails, or Slack updates ready for one-tap sending.</li>
-                        <li><strong class="text-white font-medium">V3: Executive Command Center:</strong> Simple dashboard tracking relationship health and automatic team nudges.</li>
+                        <li><strong class="text-white font-medium">V1: The "Life-Saver" (Voice Alerts):</strong> Triggers actual phone calls for critical overdue items instead of silent notifications.</li>
+                        <li><strong class="text-white font-medium">V2: One-Tap Execution:</strong> Pre-writes contextual follow-up emails ready for sending.</li>
+                        <li><strong class="text-white font-medium">V3: Command Center:</strong> Simple dashboard tracking relationship health and automatic follow-ups.</li>
                     </ul>`
             },
             'autopay': {
                 title: "The Trust Layer in Digital Payments", subtitle: "Solving AutoPay Friction", tags: ["Fintech", "UX/UI", "Product Breakdown"],
                 html: `
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-red-500 block shrink-0"></span> The Friction</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">Subscription platforms love auto-debits because they guarantee renewals. But for users, setting them up triggers major "AutoPay Anxiety." Under India's RBI guidelines, once you set them up, managing them is a mess (scattered across GPay, merchant sites, or bank portals). Many users abandon carts entirely instead of opting for auto-pay.</p>
-                    <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-accent block shrink-0"></span> The Solution: A Unified AutoPay Dashboard</h3>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">"AutoPay Anxiety". Mandates are scattered across банка/мерчантов, causing users complete confusion over their recurring subscriptions and massive cart abandonment.</p>
+                    <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-accent block shrink-0"></span> The Solution: Unified AutoPay Dashboard</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
                         <li><strong class="text-white font-medium">Clear Visibility:</strong> Pulls all mandates into one clean list linked to your phone number.</li>
-                        <li><strong class="text-white font-medium">One-Tap Cancel:</strong> See exactly when the next bill is due, and pause/cancel with a single tap.</li>
-                        <li><strong class="text-white font-medium">Actionable Alerts:</strong> Push notifications saying: "Your subscription restores tomorrow. Tap to approve, snooze, or cancel."</li>
+                        <li><strong class="text-white font-medium">One-Tap Cancel:</strong> Instant visibility and pause/cancel ability.</li>
+                        <li><strong class="text-white font-medium">Actionable Alerts:</strong> Push notifications saying: "Subscription renews tomorrow. Tap to verify or cancel."</li>
                     </ul>`
             },
             'whatsapp': {
                 title: "Native 'Schedule Send' in WhatsApp", subtitle: "Asynchronous Communication", tags: ["Communication", "UX/UI", "Product Breakdown"],
                 html: `
                     <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-red-500 block shrink-0"></span> The Friction</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">We easily schedule emails to respect people's working hours. Yet, instant messaging forces us into a "send immediately or forget entirely" corner. People currently resort to sketchy third-party keyboard extensions to schedule texts, creating massive corporate data security risks.</p>
-                    <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-accent block shrink-0"></span> The Solution: Native "Schedule Send"</h3>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4">We heavily schedule emails. Instant messaging (WhatsApp) forces "send immediately or forget entirely". Users resort to risky 3rd-party keyboards that cause data privacy compromises.</p>
+                    <h3 class="font-display text-2xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-4 h-4 rounded-full bg-accent block shrink-0"></span> The Solution: Native Schedule Send</h3>
                     <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
-                        <li><strong class="text-white font-medium">Simple Interaction:</strong> A press-and-hold on "Send" brings up a time-selection UI.</li>
-                        <li><strong class="text-white font-medium">The Queue UI:</strong> Scheduled messages sit at the bottom of the chat with a clock icon.</li>
-                        <li><strong class="text-white font-medium">On-Device Safety:</strong> Messages queue securely on-device, preserving end-to-end encryption.</li>
+                        <li><strong class="text-white font-medium">Simple Interaction:</strong> A press-and-hold on the Send button.</li>
+                        <li><strong class="text-white font-medium">The Queue UI:</strong> A dedicated, secure section for scheduled messages.</li>
+                        <li><strong class="text-white font-medium">On-Device Safety:</strong> Encrypted messages queue securely on-device.</li>
                     </ul>`
             }
         };
