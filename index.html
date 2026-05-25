@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhigya Kanungo | Product & Operations Problem Solver</title>
     
-    <!-- Premium Fonts: Outfit for headers, Plus Jakarta Sans for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +18,7 @@
                         base: '#050505',      
                         surface: '#121212', 
                         surfaceBorder: '#262626',
-                        accent: '#facc15',  // Sharp Modern Yellow
+                        accent: '#facc15',  // Premium Yellow
                         accentHover: '#eab308',
                         textMain: '#ffffff', 
                         textMuted: '#9ca3af',
@@ -91,7 +90,6 @@
     <header class="fixed w-full top-0 z-40 bg-base/85 backdrop-blur-xl border-b border-surfaceBorder/50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
-            <!-- Simple Text Logo -->
             <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                 <span class="font-display text-2xl font-bold text-white hover:text-accent transition duration-300 tracking-wide">Abhigya Kanungo</span>
             </div>
@@ -125,14 +123,12 @@
     </header>
 
     <main class="w-full">
-        <!-- 1. HERO SECTION -->
         <section class="relative min-h-[95vh] flex items-center pt-24 overflow-hidden border-b border-surfaceBorder/50">
             <div class="text-outline font-display hidden lg:block">ABHIGYA</div>
             <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-12 gap-12 items-center relative z-10 animate-fade-in-up">
                 
                 <div class="md:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-3 bg-surface border border-surfaceBorder px-4 py-2 rounded-full">
-                        <!-- Green glow requested here -->
                         <span class="w-2 h-2 rounded-full bg-successGreen animate-pulse shadow-[0_0_8px_#10b981]"></span>
                         <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-textMain opacity-90">AVAILABLE FOR FULL-TIME ROLES</span>
                     </div>
@@ -149,7 +145,6 @@
                     </div>
                 </div>
                 
-                <!-- Beautifully Scaled Profile Image Container -->
                 <div class="md:col-span-5 relative flex justify-center lg:justify-end items-center w-full h-[50vh] md:h-[70vh]">
                     <div class="absolute inset-0 bg-gradient-to-t from-base via-transparent to-transparent z-10 bottom-0 h-1/3 pointer-events-none"></div>
                     <img src="IMG_9926.JPG" onerror="this.src='img_9926.jpg'" alt="Abhigya Kanungo" class="h-full w-full max-w-md object-cover object-top opacity-90 rounded-2xl border border-surfaceBorder shadow-2xl transition duration-700 hover:opacity-100 hover:scale-[1.02]">
@@ -157,7 +152,6 @@
             </div>
         </section>
 
-        <!-- 2. ABOUT -->
         <section id="about" class="py-24 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
                 <div class="md:col-span-4 sticky top-32">
@@ -178,7 +172,6 @@
             </div>
         </section>
 
-        <!-- 3. EXPERIENCE -->
         <section id="experience" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -192,7 +185,6 @@
                 </div>
                 <div class="md:col-span-8 space-y-6">
                     
-                    <!-- AdAstraa -->
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('adastraa')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -211,7 +203,6 @@
                         </div>
                     </div>
 
-                    <!-- Fingpay -->
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('fingpay')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -230,7 +221,6 @@
                         </div>
                     </div>
 
-                    <!-- In Touch -->
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('intouch')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -252,7 +242,6 @@
             </div>
         </section>
 
-        <!-- 4. TOOLBELT -->
         <section class="py-20 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6">
                 <p class="text-xs font-bold tracking-widest uppercase text-textMuted mb-10 text-center md:text-left">My Toolbelt</p>
@@ -268,7 +257,6 @@
             </div>
         </section>
 
-        <!-- 5. BUILD LOG (PROJECT) -->
         <section id="buildlog" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -285,14 +273,13 @@
                             <span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">UX Design / Agile</span>
                         </div>
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">How This Site Came to Life</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">A standard profile can only tell you what I've done, not <em>how</em> I do it. I treated this portfolio as my own product, using an agile approach to show exactly how I think, solve problems, and bring ideas to life.</p>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">A standard profile can only tell you <em>what</em> I've done, not <em>how</em> I do it. I treated this portfolio as my own product, using an agile approach to show exactly how I think, solve problems, and execute ideas.</p>
                         <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Process →</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. EXTRACURRICULAR -->
         <section id="extracurricular" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -331,7 +318,6 @@
             </div>
         </section>
 
-        <!-- 7. CERTIFICATIONS -->
         <section class="py-20 border-b border-surfaceBorder/50 bg-surface/20">
             <div class="max-w-7xl mx-auto px-6">
                 <p class="text-xs font-bold tracking-widest uppercase text-textMuted mb-2 text-center md:text-left">Certifications</p>
@@ -366,7 +352,6 @@
             </div>
         </section>
 
-        <!-- 8. IDEAS -->
         <section id="ideas" class="py-24 border-b border-surfaceBorder/50 relative">
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
                 <div class="md:col-span-4 relative">
@@ -406,7 +391,6 @@
             </div>
         </section>
 
-        <!-- 9. CONTACT -->
         <section id="contact" class="py-32 bg-[#030303]">
             <div class="max-w-5xl mx-auto px-6 text-center">
                 <p class="text-xs font-bold tracking-widest uppercase text-accent mb-6 flex items-center justify-center gap-2"><span class="w-4 h-px bg-accent"></span> Let's Work Together <span class="w-4 h-px bg-accent"></span></p>
@@ -428,7 +412,6 @@
         </section>
     </main>
 
-    <!-- DETAIL OVERLAY (TAB 2) -->
     <div id="detail-tab">
         <div class="sticky top-0 w-full bg-base/95 backdrop-blur-xl border-b border-surfaceBorder p-4 md:p-6 flex justify-between items-center z-50">
             <div class="font-display font-bold text-lg md:text-xl text-white" id="detail-header-title">Detail View</div>
