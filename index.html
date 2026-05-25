@@ -18,7 +18,7 @@
                         base: '#050505',      
                         surface: '#121212', 
                         surfaceBorder: '#262626',
-                        accent: '#facc15',  // Premium Yellow
+                        accent: '#facc15',  // Sharp Clean Yellow
                         accentHover: '#eab308',
                         textMain: '#ffffff', 
                         textMuted: '#9ca3af',
@@ -152,37 +152,34 @@
         </section>
 
         <section id="about" class="py-24 border-b border-surfaceBorder/50 bg-surface/20">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
-                <div class="md:col-span-4 sticky top-32">
-                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-12 items-start">
+                <div class="w-full md:col-span-4 md:sticky md:top-32 space-y-2">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent flex items-center gap-2">
                         <span class="w-8 h-px bg-accent"></span> 01 / Introduction
                     </h2>
-                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white leading-tight">A bit about<br>who I am.</h3>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white leading-tight">A bit about<br class="hidden md:block"> who I am.</h3>
                 </div>
-                <div class="md:col-span-8 space-y-8">
+                <div class="w-full md:col-span-8 space-y-8 mt-2 md:mt-0">
                     <div class="text-textMuted text-xl font-light leading-relaxed">
                         <p><span class="text-white font-medium">My superpower is simple: I am a resourceful problem-solver who just gets things done.</span> If I don’t know how to do something, I will spend the time troubleshooting, brainstorming, and experimenting until I figure it out. I am the person who stays calm and finds a way to move a project forward, no matter how messy it looks at first.</p>
                     </div>
                     <button onclick="openDetail('about')" class="group flex items-center gap-3 bg-surface border border-surfaceBorder px-6 py-4 rounded hover:border-accent transition duration-300">
-                        <span class="text-sm font-bold uppercase tracking-widest text-white group-hover:text-accent transition">Read Full Profile & Competencies</span>
-                        <svg class="w-4 h-4 text-textMuted group-hover:text-accent transition transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <span class="text-sm font-bold uppercase tracking-widest text-white group-hover:text-accent transition">Read Full Profile & Competencies →</span>
                     </button>
                 </div>
             </div>
         </section>
 
         <section id="experience" class="py-24 border-b border-surfaceBorder/50 relative">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-4 relative">
-                    <div class="sticky top-32">
-                        <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2">
-                            <span class="w-8 h-px bg-accent"></span> 02 / Work
-                        </h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Professional<br>Experience</h3>
-                        <p class="text-sm text-textMuted max-w-xs leading-relaxed font-light border-l border-surfaceBorder pl-4">A timeline of my professional roles focusing on operations, product analysis, and strategic execution.</p>
-                    </div>
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-12">
+                <div class="w-full md:col-span-4 md:sticky md:top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent flex items-center gap-2">
+                        <span class="w-8 h-px bg-accent"></span> 02 / Work
+                    </h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Professional<br>Experience</h3>
+                    <p class="text-sm text-textMuted max-w-xs leading-relaxed font-light border-l border-surfaceBorder pl-4">A timeline of my professional roles focusing on operations, product analysis, and strategic execution.</p>
                 </div>
-                <div class="md:col-span-8 space-y-6">
+                <div class="w-full md:col-span-8 space-y-6">
                     
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('adastraa')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
@@ -257,22 +254,21 @@
         </section>
 
         <section id="buildlog" class="py-24 border-b border-surfaceBorder/50 relative">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-4 relative">
-                    <div class="sticky top-32">
-                        <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2">
-                            <span class="w-8 h-px bg-accent"></span> 03 / Project
-                        </h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Building This<br>Portfolio</h3>
-                    </div>
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-12">
+                <div class="w-full md:col-span-4 md:sticky md:top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent flex items-center gap-2">
+                        <span class="w-8 h-px bg-accent"></span> 03 / Project
+                    </h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Building This<br>Portfolio</h3>
+                    <p class="text-xs text-textMuted uppercase font-semibold tracking-wider">How This Site Came to Life</p>
                 </div>
-                <div class="md:col-span-8 space-y-6">
+                <div class="w-full md:col-span-8 space-y-6">
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('buildlog')">
                         <div class="flex items-center gap-3 mb-3">
                             <span class="bg-surfaceBorder text-accent text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">UX Design / Agile</span>
                         </div>
-                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">How This Site Came to Life</h4>
-                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">A standard profile can only tell you <em>what</em> I've done, not <em>how</em> I do it. I treated this portfolio as my own product, using an agile approach to show exactly how I think, solve problems, and bring ideas to life.</p>
+                        <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">Building This Portfolio</h4>
+                        <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">A standard profile can only tell you what I've done, not how I do it. I treated this portfolio like a real product, using an agile approach to showcase exactly how I think, solve problems, and execute.</p>
                         <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 mt-6 transition duration-300">Read Full Process →</p>
                     </div>
                 </div>
@@ -280,14 +276,12 @@
         </section>
 
         <section id="extracurricular" class="py-24 border-b border-surfaceBorder/50 relative">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-4 relative">
-                    <div class="sticky top-32">
-                        <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 04 / Extra</h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Leadership<br>& Sports</h3>
-                    </div>
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-12">
+                <div class="w-full md:col-span-4 md:sticky md:top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 04 / Extra</h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Leadership<br>& Sports</h3>
                 </div>
-                <div class="md:col-span-8 space-y-6">
+                <div class="w-full md:col-span-8 space-y-6">
                     <div class="group hover-accent-group bg-surface/40 border border-surfaceBorder p-6 md:p-8 rounded-xl cursor-pointer transition duration-300" onclick="openDetail('edc')">
                         <div class="flex flex-col sm:flex-row sm:items-start gap-6">
                             <div class="w-16 h-16 shrink-0 bg-white rounded-lg p-2 flex items-center justify-center shadow-lg transition duration-300">
@@ -352,22 +346,20 @@
         </section>
 
         <section id="ideas" class="py-24 border-b border-surfaceBorder/50 relative">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-4 relative">
-                    <div class="sticky top-32">
-                        <h2 class="text-xs font-bold tracking-widest uppercase text-accent mb-3 flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 05 / Product</h2>
-                        <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Strategic<br>Breakdowns</h3>
-                        <p class="text-sm text-textMuted max-w-xs leading-relaxed font-light border-l border-surfaceBorder pl-4">How I analyze friction and design practical, high-impact product solutions.</p>
-                    </div>
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-12">
+                <div class="w-full md:col-span-4 md:sticky md:top-32">
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accent flex items-center gap-2"><span class="w-8 h-px bg-accent"></span> 05 / Product</h2>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Strategic<br>Breakdowns</h3>
+                    <p class="text-sm text-textMuted max-w-xs leading-relaxed font-light border-l border-surfaceBorder pl-4">How I analyze friction and design practical, high-impact product solutions.</p>
                 </div>
-                <div class="md:col-span-8 space-y-8">
+                <div class="w-full md:col-span-8 space-y-8">
                     
                     <div class="group hover-accent-group border-b border-surfaceBorder/50 pb-10 cursor-pointer" onclick="openDetail('founder')">
                         <div class="flex items-center gap-3 mb-3"><span class="bg-surfaceBorder text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Productivity / AI</span></div>
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">The Founder Assistant</h4>
                         <p class="text-white font-medium mb-3">Shifting from Task Tracking to Execution</p>
                         <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Ever promised to "send that over" during a busy meeting and completely forgot? Meet the AI associate that prevents commercial promises from slipping by actively executing tasks instead of just logging them.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown → <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown →</p>
                     </div>
 
                     <div class="group hover-accent-group border-b border-surfaceBorder/50 pb-10 cursor-pointer" onclick="openDetail('autopay')">
@@ -375,7 +367,7 @@
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">The Trust Layer in Digital Payments</h4>
                         <p class="text-white font-medium mb-3">Solving AutoPay Friction</p>
                         <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Nobody likes feeling trapped in a hidden subscription loop. Imagine a unified dashboard giving users one-tap control over scattered payments, building instant trust and curing 'AutoPay Anxiety' for good.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown → <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown →</p>
                     </div>
 
                     <div class="group hover-accent-group pb-4 cursor-pointer" onclick="openDetail('whatsapp')">
@@ -383,29 +375,50 @@
                         <h4 class="font-display text-3xl font-bold text-white group-hover:text-accent transition mb-1">Native 'Schedule Send' in WhatsApp Business</h4>
                         <p class="text-white font-medium mb-3">Simple Messaging for Real Life</p>
                         <p class="text-textMuted font-light leading-relaxed mb-4 text-sm md:text-base">Running a business shouldn't mean being 'on-call' 24/7. This built-in tool specifically for WhatsApp Business would let professionals plan and schedule messages to send at the perfect time, respecting both your work hours and your clients' rest, without compromising anyone's privacy.</p>
-                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown → <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></p>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.15em] accent-target text-white flex items-center gap-2 transition duration-300">Read Full Breakdown →</p>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-32 bg-[#030303]">
+        <section id="contact" class="py-24 bg-[#030303] border-t border-surfaceBorder/20">
             <div class="max-w-5xl mx-auto px-6 text-center">
-                <p class="text-xs font-bold tracking-widest uppercase text-accent mb-6 flex items-center justify-center gap-2"><span class="w-4 h-px bg-accent"></span> Let's Work Together <span class="w-4 h-px bg-accent"></span></p>
-                <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight max-w-4xl mx-auto leading-tight">
-                    Always open to meaningful conversations, collaboration, and opportunities to build, learn, and contribute together.
+                <p class="text-xs font-bold tracking-widest uppercase text-accent mb-6 flex items-center justify-center gap-2"><span class="w-4 h-px bg-accent"></span> Let's Connect <span class="w-4 h-px bg-accent"></span></p>
+                <h2 class="font-display text-4xl font-bold text-white mb-12 tracking-tight max-w-3xl mx-auto leading-tight">
+                    Always open to meaningful conversations, collaboration, and opportunities to build together.
                 </h2>
-                <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <a href="mailto:kanungoabhigya3750@gmail.com" class="inline-flex items-center gap-3 bg-white text-base font-bold px-8 py-4 rounded hover:bg-accent transition w-full sm:w-auto justify-center shadow-lg hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] text-black">
-                        Send me an email <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                
+                <div class="flex items-center justify-center gap-8 mt-12 bg-surface/50 border border-surfaceBorder/60 max-w-lg mx-auto py-5 px-8 rounded-2xl shadow-xl">
+                    
+                    <a href="https://www.linkedin.com/in/abhigyakanungo" target="_blank" class="group text-textMuted hover:text-accent transition duration-300 flex flex-col items-center gap-2">
+                        <svg class="w-6 h-6 stroke-current fill-current group-hover:scale-110 transition" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        <span class="text-[10px] font-bold uppercase tracking-wider opacity-60 group-hover:opacity-100">LinkedIn</span>
                     </a>
-                </div>
-                <div class="flex flex-wrap justify-center gap-6 mt-16 text-xs font-bold tracking-widest uppercase text-textMuted">
-                    <a href="https://drive.google.com/drive/folders/1gUuhk-BoO5bukmOsqsas--g-3e5wpGmQ?usp=share_link" target="_blank" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">Resume</a>
-                    <a href="https://www.linkedin.com/in/abhigyakanungo" target="_blank" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">LinkedIn</a>
-                    <a href="tel:+919993805217" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">Mobile: +91 9993805217</a>
-                    <a href="mailto:kanungoabhigya3750@gmail.com" class="hover:text-accent transition border-b border-transparent hover:border-accent pb-1">Email</a>
+
+                    <a href="mailto:kanungoabhigya3750@gmail.com" class="group text-textMuted hover:text-accent transition duration-300 flex flex-col items-center gap-2">
+                        <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        <span class="text-[10px] font-bold uppercase tracking-wider opacity-60 group-hover:opacity-100">Email</span>
+                    </a>
+
+                    <a href="tel:+919993805217" class="group text-textMuted hover:text-accent transition duration-300 flex flex-col items-center gap-2">
+                        <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <span class="text-[10px] font-bold uppercase tracking-wider opacity-60 group-hover:opacity-100">Call</span>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1gUuhk-BoO5bukmOsqsas--g-3e5wpGmQ?usp=share_link" target="_blank" class="group text-textMuted hover:text-accent transition duration-300 flex flex-col items-center gap-2">
+                        <svg class="w-6 h-6 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span class="text-[10px] font-bold uppercase tracking-wider opacity-60 group-hover:opacity-100">Resume</span>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -462,7 +475,7 @@
             'buildlog': {
                 title: "How This Site Came to Life (Build Log)", subtitle: "03 / Project Detail", tags: ["UX Design", "Agile Execution", "AI Collaboration"],
                 html: `
-                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4 text-base md:text-lg">A piece of paper or a standard LinkedIn profile can only tell you <em>what</em> I've done—not <em>how</em> I do it. I wanted a space that captures how I actually think, solve problems, and bring ideas to life. So, instead of using a basic template, I treated this portfolio as my own product and built it from scratch.</p>
+                    <p class="text-textMuted font-light leading-relaxed mb-8 border-l border-surfaceBorder pl-4 text-base md:text-lg">A standard profile can only tell you <em>what</em> I've done—not <em>how</em> I do it. I wanted a space that captures how I actually think, solve problems, and bring ideas to life. So, instead of using a basic template, I treated this portfolio as my own product and built it from scratch.</p>
 
                     <h3 class="font-display text-2xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">🔹 The Agile Approach</h3>
                     <p class="text-textMuted font-light leading-relaxed mb-6">I didn't want a messy, overwhelming website. I applied core product management and agile principles to map out the requirements, design the user experience (UX), and execute:</p>
@@ -478,7 +491,7 @@
                             <strong class="text-white block mb-1">Build & AI Collaboration:</strong> I kept the tech stack lightweight using HTML, CSS (Tailwind), and vanilla JavaScript. I also collaborated with AI as a thought partner to rapidly prototype the code layout, brainstorm structure, and refine the narrative.
                         </li>
                         <li class="bg-surface p-4 rounded border border-surfaceBorder">
-                            <strong class="text-white block mb-1">Ship & Iterate:</strong> I connected the site to GitHub and Netlify for continuous deployment. This allows me to treat the site as a living product, pushing live updates instantly as I learn and grow.
+                            <strong class="text-white block mb-1">Ship & Iterate:</strong> I deployed the code directly on GitHub and connected it to **GitHub Pages** for immediate visibility. This allows me to treat the site as a living product, pushing live updates instantly as I learn and grow.
                         </li>
                     </ul>
 
@@ -488,7 +501,7 @@
                         <li>Generative AI (Prototyping & Copy Refinement)</li>
                         <li>HTML5 & JavaScript (Custom UI logic)</li>
                         <li>Tailwind CSS (Styling)</li>
-                        <li>Git, GitHub & Netlify (Version Control & Deployment)</li>
+                        <li>Git, GitHub & GitHub Pages (Version Control & Deployment)</li>
                     </ul>`
             },
             'adastraa': {
@@ -519,18 +532,24 @@
                     </div>`
             },
             'fingpay': {
-                title: "Operations Associate", subtitle: "Fingpay (Tapits Technologies) | Jun 2025 – Nov 2025", tags: ["ERP Integration", "BRD/PRD", "UAT", "SQL", "Figma"],
+                title: "Operations Associate (Fintech)", subtitle: "Fingpay (Tapits Technologies) | Jun 2025 – Nov 2025", tags: ["Payment Architecture", "BRD/PRD Engineering", "UAT Scenarios", "Cross-Functional Syncs"],
                 html: `
-                    <h3 class="font-display text-2xl font-bold text-white mb-4">What the Company Does</h3>
-                    <p class="text-textMuted font-light leading-relaxed mb-8">Fingpay is a fintech company that provides payment collection infrastructure (UPI, QR codes, Cards) and automates financial reconciliation for businesses.</p>
-                    <h3 class="font-display text-2xl font-bold text-white mb-4">What I Do & How I Do It</h3>
-                    <ul class="space-y-4 text-textMuted font-light list-disc ml-5 mb-10">
-                        <li><strong class="text-white font-medium">ERP & Payment Integrations:</strong> Partnered with 5+ strategic ERP and billing software providers to connect Fingpay's payment APIs.</li>
-                        <li><strong class="text-white font-medium">Writing Requirements (BRD/PRD):</strong> Gathered complex requirements from clients and translated them into actionable BRDs.</li>
-                        <li><strong class="text-white font-medium">Testing, Onboarding & Support:</strong> Handled User Acceptance Testing (UAT) to catch issues early, resolved day-to-day integration queries.</li>
-                        <li><strong class="text-white font-medium">Agile Coordination:</strong> Worked daily with engineering teams to align timelines.</li>
+                    <div class="mb-6 bg-surface p-5 rounded-lg border border-surfaceBorder">
+                        <h4 class="text-white font-semibold flex items-center gap-2 mb-2">🔹 What the Company Does:</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">Fingpay is an enterprise-grade fintech infrastructure player delivering integrated multi-option collections (UPI core systems, QR parameters, and Credit/Debit acquiring layers) coupled with automated institutional reconciliation workflows.</p>
+                    </div>
+                    <div class="mb-6 bg-surface p-5 rounded-lg border border-surfaceBorder">
+                        <h4 class="text-white font-semibold flex items-center gap-2 mb-2">🔹 My Actual Job:</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">I operated as the lead operational liaison and functional system router. My primary metric was successfully embedding collection and processing APIs deep within corporate client ERP models. I coordinated tasks across development squads, sales units, reconciliation panels, legal teams, and client management groups.</p>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold text-white mb-4 mt-8">🔹 Key Operations & Impact Segments:</h3>
+                    <ul class="space-y-4 text-textMuted font-light list-none ml-0 mb-8">
+                        <li class="p-4 bg-base border border-surfaceBorder rounded-lg"><strong class="text-white font-medium block mb-1">ERP Ecosystem Integrations:</strong> Strategically coordinated across 5+ enterprise billing infrastructure matrices to embed live payment hooks, cutting legacy payment mapping efforts completely down to zero manual human hours.</li>
+                        <li class="p-4 bg-base border border-surfaceBorder rounded-lg"><strong class="text-white font-medium block mb-1">Requirement Engineering:</strong> Conducted technical mapping workshops with target merchants to uncover data schema parameters, capturing constraints neatly in detailed Business Requirement Documents (BRDs).</li>
+                        <li class="p-4 bg-base border border-surfaceBorder rounded-lg"><strong class="text-white font-medium block mb-1">User Acceptance Testing (UAT):</strong> Wrote and verified comprehensive transaction scripts and data matching cycles to pinpoint settlement anomalies before live package deployments.</li>
+                        <li class="p-4 bg-base border border-surfaceBorder rounded-lg"><strong class="text-white font-medium block mb-1">Agile Sprint Alignment:</strong> Led standard workflow check-ins with database development nodes to unblock environment deployment schedules and client implementation tracks.</li>
                     </ul>
-                    <h3 class="font-display text-xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">Gallery</h3>
+                    <h3 class="font-display text-xl font-bold text-white mb-4 border-b border-surfaceBorder pb-2">🖼️ Project Gallery</h3>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <img src="fingpay-1.jpg" onerror="this.style.display='none'" class="w-full sm:w-1/2 h-auto max-h-64 object-cover rounded-lg border border-surfaceBorder">
                         <img src="fingpay-2.jpg" onerror="this.style.display='none'" class="w-full sm:w-1/2 h-auto max-h-64 object-cover rounded-lg border border-surfaceBorder">
